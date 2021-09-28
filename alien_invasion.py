@@ -1,6 +1,9 @@
+
+##external moduls imported
 import sys
 import pygame
 
+#internal modules imported
 from settings import Settings
 from ship import Ship
 
@@ -24,7 +27,9 @@ def run_game():
     #set veriable for background color.
     bg_color = (ai_settings.bg_color)
 
-    #draw a ship
+    #draw a ship by making an instance for Ship class.
+    #to make an instance of ship, we need to provide screen attrribute 
+    #which has the info of screen size and other info.
     ship = Ship(sys.screen)
 
 
@@ -39,7 +44,8 @@ def run_game():
         #this will fill the screen with given
         #color on every while loop.
         sys.screen.fill(bg_color)
-
+        
+        #putting the ship on top of backgroud.
         ship.blitme()
 
         # Make the most recently drawn screen visible.
